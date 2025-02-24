@@ -1,0 +1,20 @@
+# Changes here will be overwritten by Copier.
+_commit: 1.6.3
+_src_path: gh:pawamoy/copier-uv
+author_email: vandy.goel23@gmail.com
+author_fullname: Vandit Goel
+author_username: vandyG
+copyright_date: '2025'
+copyright_holder: Vandit Goel
+copyright_holder_email: vandy.goel23@gmail.com
+copyright_license: MIT
+insiders: false
+project_description: Implementation of Linear Regression from scratch.
+project_name: Linear Regression
+python_package_command_line_name: lr
+python_package_distribution_name: lr
+python_package_import_name: lr
+repository_name: linear-regression
+repository_namespace: vandyG
+repository_provider: github.com
+
