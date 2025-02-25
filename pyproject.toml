@@ -29,7 +29,11 @@ classifiers = [
     "Topic :: Utilities",
     "Typing :: Typed",
 ]
-dependencies = []
+dependencies = [
+    "matplotlib>=3.9.4",
+    "pandas>=2.2.3",
+    "scikit-learn>=1.6.1",
+]
 
 [project.urls]
 Homepage = "https://vandyG.github.io/linear-regression"

@@ -19,7 +19,6 @@ def main() -> None:
     X_train_features = X_train[:, 0:3]  # All features except petal width  # noqa: N806
     y_train_target = X_train[:, 3]  # Petal width
 
-    # Create and train the model without regularization first
     model_no_reg = LinearRegression(learning_rate=0.01)
     model_no_reg.fit(X_train_features, y_train_target, batch_size=32, regularization=0, max_epochs=100, patience=3)
 
@@ -27,7 +26,6 @@ def main() -> None:
         os.makedirs("models")
     model_no_reg.save("models/regression4_no_reg.pkl")
 
-    # Now train with regularization
     model_reg = LinearRegression(learning_rate=0.01)
     model_reg.fit(X_train_features, y_train_target, batch_size=32, regularization=0.1, max_epochs=100, patience=3)
 
@@ -47,7 +45,6 @@ def main() -> None:
         "plots/regression4_with_reg_loss.png",
     )
 
-    # Print weights to compare regularized vs non-regularized models
     logger.info("Weights without regularization:")
     logger.info(model_no_reg.W)
     logger.info("\nWeights with regularization:")
