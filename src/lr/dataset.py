@@ -1,9 +1,10 @@
 """This is a helper module to load the iris dataset and plot the results of training."""
 
 import matplotlib.pyplot as plt
-from linear_regression import LinearRegression
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
+
+from lr.linear_regression import LinearRegression
 
 
 def load_iris_data() -> tuple:
