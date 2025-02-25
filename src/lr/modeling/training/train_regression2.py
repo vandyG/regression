@@ -1,4 +1,4 @@
-"""This module trains a Linear Regression Model to predict Sepal Width given Sepal Length."""
+"""This module trains a Linear Regression Model to predict Petal Width given Petal Length."""
 
 import logging
 import os
@@ -13,21 +13,21 @@ def main() -> None:
     """Main function to train the model."""
     X_train, X_test = load_iris_data()  # noqa: N806
 
-    X_train_features = X_train[:, 0].reshape(-1, 1)  # Sepal length  # noqa: N806
-    y_train_target = X_train[:, 1]  # Sepal width
+    X_train_features = X_train[:, 2].reshape(-1, 1)  # Petal length  # noqa: N806
+    y_train_target = X_train[:, 3]  # Petal width
 
     model = LinearRegression(learning_rate=0.01)
     model.fit(X_train_features, y_train_target, batch_size=32, max_epochs=100, patience=3)
 
     if not os.path.exists("models"):
         os.makedirs("models")
-    model.save("models/regression1.pkl")
+    model.save("models/regression2.pkl")
 
     if not os.path.exists("plots"):
         os.makedirs("plots")
-    plot_training_loss(model, "Training and Validation Loss: Sepal Length → Sepal Width", "plots/regression1_loss.png")
+    plot_training_loss(model, "Training and Validation Loss: Petal Length → Petal Width", "plots/regression2_loss.png")
 
-    logger.info("Model 1 trained and saved successfully.")
+    logger.info("Model 2 trained and saved successfully.")
 
 
 if __name__ == "__main__":
