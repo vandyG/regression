@@ -22,8 +22,8 @@ def main() -> None:
 
     # Evaluate the model
     mse = model.score(X_test_features, y_test_target)
-    logger.info("Model 1 - Sepal Length → Sepal Width")
-    logger.info(f"Test Mean Squared Error: {mse:.6f}")
+    print("Model 1 - Sepal Length → Sepal Width")
+    print(f"Test Mean Squared Error: {mse:.6f}")
 
 
 if __name__ == "__main__":

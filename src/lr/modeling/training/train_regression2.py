@@ -27,7 +27,7 @@ def main() -> None:
         os.makedirs("plots")
     plot_training_loss(model, "Training and Validation Loss: Petal Length → Petal Width", "plots/regression2_loss.png")
 
-    logger.info("Model 2 trained and saved successfully.")
+    print("Model 2 trained and saved successfully.")
 
 
 if __name__ == "__main__":

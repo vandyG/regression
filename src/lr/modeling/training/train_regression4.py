@@ -10,6 +10,7 @@ from lr.dataset import load_iris_data, plot_training_loss
 from lr.linear_regression import LinearRegression
 
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
 
 
 def main() -> None:
@@ -27,7 +28,7 @@ def main() -> None:
     model_no_reg.save("models/regression4_no_reg.pkl")
 
     model_reg = LinearRegression(learning_rate=0.01)
-    model_reg.fit(X_train_features, y_train_target, batch_size=32, regularization=0.1, max_epochs=100, patience=3)
+    model_reg.fit(X_train_features, y_train_target, batch_size=32, regularization=0.0005, max_epochs=100, patience=3)
 
     model_reg.save("models/regression4_with_reg.pkl")
 
@@ -45,14 +46,14 @@ def main() -> None:
         "plots/regression4_with_reg_loss.png",
     )
 
-    logger.info("Weights without regularization:")
-    logger.info(model_no_reg.W)
-    logger.info("\nWeights with regularization:")
-    logger.info(model_reg.W)
-    logger.info("\nDifference in weights:")
-    logger.info(model_no_reg.W - model_reg.W)
+    print("Weights without regularization:")
+    print(model_no_reg.W)
+    print("\nWeights with regularization:")
+    print(model_reg.W)
+    print("\nDifference in weights:")
+    print(model_no_reg.W - model_reg.W)
 
-    logger.info("Model 4 (with and without regularization) trained and saved successfully.")
+    print("Model 4 (with and without regularization) trained and saved successfully.")
 
 
 if __name__ == "__main__":

@@ -27,10 +27,10 @@ def main() -> None:
     mse_no_reg = model_no_reg.score(X_test_features, y_test_target)
     mse_reg = model_reg.score(X_test_features, y_test_target)
 
-    logger.info("Model 4 - All Features → Petal Width")
-    logger.info(f"Test Mean Squared Error (No Regularization): {mse_no_reg:.6f}")
-    logger.info(f"Test Mean Squared Error (With Regularization): {mse_reg:.6f}")
-    logger.info(f"Difference in MSE: {mse_no_reg - mse_reg:.6f}")
+    print("Model 4 - All Features → Petal Width")
+    print(f"Test Mean Squared Error (No Regularization): {mse_no_reg:.6f}")
+    print(f"Test Mean Squared Error (With Regularization): {mse_reg:.6f}")
+    print(f"Difference in MSE: {mse_no_reg - mse_reg:.6f}")
 
 
 if __name__ == "__main__":

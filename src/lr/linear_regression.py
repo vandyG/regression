@@ -1,12 +1,13 @@
 """Implementation of Linear Regression using Gradient Descent."""
 
 import pickle
-from logging import getLogger
+from logging import DEBUG, getLogger
 from typing import Self
 
 import numpy as np
 
 logger = getLogger(__name__)
+logger.setLevel(DEBUG)
 
 
 class LinearRegression:

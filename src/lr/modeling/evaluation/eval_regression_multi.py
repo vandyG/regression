@@ -19,15 +19,15 @@ def main() -> None:
     model.load("models/regression_multi.pkl")
 
     mse = model.score(X_test_features, y_test_target)
-    logger.info("Multi-Output Regression Model - Sepal Features → Petal Features")
-    logger.info(f"Test Mean Squared Error: {mse:.6f}")
+    print("Multi-Output Regression Model - Sepal Features → Petal Features")
+    print(f"Test Mean Squared Error: {mse:.6f}")
 
     predictions = model.predict(X_test_features)
 
-    logger.info("\nSample predictions vs actual values:")
-    logger.info("Predicted Petal Length, Predicted Petal Width | Actual Petal Length, Actual Petal Width")
+    print("\nSample predictions vs actual values:")
+    print("Predicted Petal Length, Predicted Petal Width | Actual Petal Length, Actual Petal Width")
     for i in range(min(5, len(predictions))):
-        logger.info(
+        print(
             f"{predictions[i][0]:.2f}, {predictions[i][1]:.2f} | {y_test_target[i][0]:.2f}, {y_test_target[i][1]:.2f}",
         )
 

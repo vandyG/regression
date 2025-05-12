@@ -19,8 +19,8 @@ def main() -> None:
     model.load("models/regression3.pkl")
 
     mse = model.score(X_test_features, y_test_target)
-    logger.info("Model 3 - Sepal Features → Petal Length")
-    logger.info(f"Test Mean Squared Error: {mse:.6f}")
+    print("Model 3 - Sepal Features → Petal Length")
+    print(f"Test Mean Squared Error: {mse:.6f}")
 
 
 if __name__ == "__main__":
